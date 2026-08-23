@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Update <lastmod> when a page's content changes.
+  files/cv.pdf is deliberately NOT listed: we want cv.html to rank for CV queries
+  rather than compete with the PDF. It stays crawlable via the link on cv.html.
+  Add files/jmp.pdf here once that file exists. Listing a URL that 404s produces a
+  Search Console error, so add it only after the PDF is in place.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://valeriagargiulo.com/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://valeriagargiulo.com/research.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://valeriagargiulo.com/cv.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://valeriagargiulo.com/contact.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <priority>0.5</priority>
+  </url>
+</urlset>

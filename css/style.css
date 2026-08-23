@@ -1,0 +1,245 @@
+/* Valeria Gargiulo — personal academic site
+   One stylesheet, no external requests, no build step.
+   Light-first: committees print these pages. */
+
+:root {
+  --ink:   #1c1c1a;
+  --muted: #5c5a55;
+  --rule:  #e2ded6;
+  --bg:    #fdfdfb;
+  --panel: #f6f4ef;
+  --link:  #1d6b48;
+  --flag:  #b3261e;
+  --serif: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
+  --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:   #e8e6e1;
+    --muted: #a5a29b;
+    --rule:  #35332e;
+    --bg:    #16150f;
+    --panel: #1f1e18;
+    --link:  #6fc08c;
+    --flag:  #ff6b60;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1.0625rem/1.65 var(--serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* ---------- header + nav ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.site-name {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-nav {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+}
+
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--link); text-decoration: underline; }
+.site-nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+
+/* ---------- intro block ---------- */
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem 2rem;
+}
+
+.intro-text { flex: 1 1 20rem; }
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.fields {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+
+.quicklinks {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.quicklinks a + a { margin-left: 0.9rem; }
+
+.portrait {
+  flex: 0 0 auto;
+  width: 180px;
+  height: auto;
+  border-radius: 3px;
+  background: var(--panel);
+}
+
+.bio { margin: 2rem 0 0; }
+.bio p { margin: 0 0 1rem; }
+
+/* ---------- sections + papers ---------- */
+
+main { padding-bottom: 3rem; }
+
+h2 {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 2.75rem 0 1.1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.paper { margin: 0 0 2rem; }
+
+.paper h3 {
+  font-size: 1.18rem;
+  line-height: 1.35;
+  margin: 0 0 0.3rem;
+  font-weight: 700;
+}
+
+.paper .meta {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 0.65rem;
+}
+
+.paper .meta a { color: var(--link); }
+
+.abstract { margin: 0; }
+.abstract p { margin: 0 0 0.8rem; }
+
+details.abstract > summary {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--link);
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+  width: max-content;
+}
+
+details.abstract[open] > summary { margin-bottom: 0.8rem; }
+
+/* ---------- CV page ---------- */
+
+.cv-entry { margin: 0 0 1.15rem; }
+.cv-entry .when {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: block;
+}
+.cv-entry .what { margin: 0; }
+.cv-list { margin: 0; padding-left: 1.15rem; }
+.cv-list li { margin-bottom: 0.5rem; }
+
+.updated {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 3rem;
+  padding: 1.5rem 0 3rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.site-footer p { margin: 0 0 0.35rem; }
+
+/* ---------- placeholder flag: loud on purpose ---------- */
+
+.tktk {
+  background: var(--flag);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.1em 0.45em;
+  border-radius: 2px;
+}
+
+p.tktk, div.tktk { display: block; padding: 0.6em 0.8em; }
+
+/* ---------- narrow screens ---------- */
+
+@media (max-width: 34rem) {
+  body { font-size: 1rem; }
+  h1 { font-size: 1.75rem; }
+  .portrait { width: 140px; }
+  .site-header .wrap { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- print: CV especially ---------- */
+
+@media print {
+  :root { --ink: #000; --muted: #333; --rule: #999; --bg: #fff; --link: #000; }
+  body { background: #fff; color: #000; font-size: 10.5pt; }
+  .site-header, .site-nav, .site-footer, .noprint { display: none !important; }
+  .wrap { max-width: none; padding: 0; }
+  a { text-decoration: none; }
+  h2 { margin-top: 1.2rem; }
+  details.abstract > summary { display: none; }
+  details.abstract > *:not(summary) { display: block !important; }
+  .tktk { background: none; color: #000; border: 1px solid #000; }
+}
