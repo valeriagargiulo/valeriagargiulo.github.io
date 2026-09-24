@@ -53,7 +53,7 @@ affiliations.
 
 ### The hosted CV PDF &mdash; done, and clean
 
-`files/cv.pdf` is the 2026-08-23 version. Its header carries the UPF email and the
+`files/cv.pdf` is the 2026-09-24 version (v3). Its header carries the UPF email and the
 department address only &mdash; **no phone number, no home address**, no referee
 emails. Nothing in it needs withholding, so there is a single CV variant rather than
 a public and a private one.
