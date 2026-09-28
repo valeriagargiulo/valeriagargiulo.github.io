@@ -53,7 +53,7 @@ affiliations.
 
 ### The hosted CV PDF &mdash; done, and clean
 
-`files/cv.pdf` is the 2026-09-28 version (v4). Its header carries the UPF email and the
+`files/cv.pdf` is the 2026-09-28 version (v5). Its header carries the UPF email and the
 department address only &mdash; **no phone number, no home address**, no referee
 emails. Nothing in it needs withholding, so there is a single CV variant rather than
 a public and a private one.
@@ -94,6 +94,12 @@ Restore it when the teaching statement exists (an October deliverable per
 `Package/CHECKLIST.md`): move the file back into `site/`, fill in the philosophy text
 and `files/teaching-statement.pdf`, add `<a href="teaching.html">Teaching</a>` to the
 nav in all pages, and re-add its `<url>` entry to `sitemap.xml`.
+
+Also finish the dangling line at the end of the Teaching section of `cv.html`,
+which currently reads "Teaching philosophy and statement:." with nothing after the
+colon. It is live and visible; left as is by decision (2026-09-28) until the
+statement exists, then complete it with links to `teaching.html` and
+`files/teaching-statement.pdf`.
 
 ### Profile links &mdash; LinkedIn in, two still missing
 
