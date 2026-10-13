@@ -17,6 +17,22 @@ and invalid structured data.
 
 ## Still outstanding
 
+### ⚠ The CV PDF still carries the old paper title
+
+`files/cv.pdf` (and the LaTeX source behind it) says *"A New Approach to Fiscal
+Multipliers: Time Variation and **High Frequency Shocks**"*. The website was updated
+to the new title, *"...Time Variation and **Highly Disaggregated Shocks**"*, on
+2026-10-13, so **the page and the downloadable CV currently disagree.**
+
+Deliberately deferred: the plan is to fix the CV title at the same time as uploading
+the revised Inoue–Rossi PDF. Note the two are separable — the CV title could be
+corrected on its own at any point, and the same mismatch exists in whatever CV
+vintage went to the GPEFM office and to employers.
+
+When fixing it: recompile, save the new dated vintage in `Package/CV/`, copy it over
+`files/cv.pdf` keeping the filename, then commit and push.
+
+
 ### Working-paper PDFs — `research.html`
 
 - **Inoue & Rossi** — under revision. The site links the **CEPR Discussion Paper
@@ -24,7 +40,10 @@ and invalid structured data.
   *"...Time Variation and Highly Disaggregated Shocks"* and a reader clicking through
   will see the older one. Replace with `files/<slug>.pdf` once the revision is ready,
   and drop the "(earlier version)" label then.
-- **Ghosh** — stays "Draft available on request" by choice.
+- **Ghosh** — moved to a **Work in Progress** section (2026-10-13): early-stage, no
+  circulatable draft, so the "available on request" offer was removed. Promote it to
+  Working Papers once a draft exists. The same split is mirrored on `cv.html` and
+  should be mirrored in the CV PDF at the next recompile.
 - **Debortoli et al. (MEGAIReF)** — hosted at `files/megairef.pdf` (AIReF Working
   Paper DT/2025/1).
 
