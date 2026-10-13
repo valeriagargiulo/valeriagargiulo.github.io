@@ -18,14 +18,20 @@ and invalid structured data.
 ## Still outstanding
 
 ### Working-paper PDFs — `research.html`
-The three working papers show "Draft available on request" rather than a link. The
-CEPR version of the fiscal-multipliers paper is deliberately **not** linked: it is
-superseded, and the current draft should be posted instead when ready.
 
-To add one: drop the PDF in `files/`, replace the "Draft available on request" text
-with `<a href="files/<slug>.pdf">PDF</a>`. Consider adding it to `sitemap.xml` too —
-but only once the file is actually live, since a URL that 404s produces a Search
-Console error.
+- **Inoue & Rossi** — under revision. The site links the **CEPR Discussion Paper
+  20670**, labelled "(earlier version)" because the title has since changed to
+  *"...Time Variation and Highly Disaggregated Shocks"* and a reader clicking through
+  will see the older one. Replace with `files/<slug>.pdf` once the revision is ready,
+  and drop the "(earlier version)" label then.
+- **Ghosh** — stays "Draft available on request" by choice.
+- **Debortoli et al. (MEGAIReF)** — hosted at `files/megairef.pdf` (AIReF Working
+  Paper DT/2025/1).
+
+Deliberately **not** in `sitemap.xml`: only `files/jmp.pdf` is listed there, so that
+`research.html` ranks for the other paper titles rather than competing with its own
+PDFs. The published EER article is linked to the journal, never hosted — that would
+be the publisher's typeset version.
 
 ### Teaching page — parked outside the repository
 Lives at `Package/Website/drafts/teaching.html`, **not** in the site folder. Its only
