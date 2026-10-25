@@ -162,7 +162,14 @@ h2 {
 .paper .meta a { color: var(--link); }
 
 .abstract { margin: 0; }
-.abstract p { margin: 0 0 0.8rem; }
+.abstract p {
+  margin: 0 0 0.8rem;
+  text-align: justify;
+  /* hyphenation keeps justified text from opening rivers of whitespace,
+     which is the usual reason justified text reads worse, not better */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 
 details.abstract > summary {
   font-family: var(--sans);
@@ -228,6 +235,8 @@ p.tktk, div.tktk { display: block; padding: 0.6em 0.8em; }
   h1 { font-size: 1.75rem; }
   .portrait { width: 140px; }
   .site-header .wrap { flex-direction: column; align-items: flex-start; }
+  /* justified text needs a long enough measure; on a phone it just opens gaps */
+  .abstract p { text-align: left; }
 }
 
 /* ---------- print: CV especially ---------- */
