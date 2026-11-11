@@ -19,11 +19,13 @@ and invalid structured data.
 
 ### Working-paper PDFs — `research.html`
 
-- **Inoue & Rossi** — under revision. The site links the **CEPR Discussion Paper
-  20670**, labelled "(earlier version)" because the title has since changed to
-  *"...Time Variation and Highly Disaggregated Shocks"* and a reader clicking through
-  will see the older one. Replace with `files/<slug>.pdf` once the revision is ready,
-  and drop the "(earlier version)" label then.
+- **Inoue & Rossi** — **submitted**; the current draft (2026-11-11) is hosted at
+  `files/fiscal-multipliers.pdf`. The CEPR DP 20670 link is still shown, labelled
+  "(earlier version)", because the DP carries the old title (*"...High Frequency
+  Shocks"*). **Pending:** Barbara is updating the CEPR entry; when the new link
+  arrives, swap it in on `research.html` and `index.html` and drop the label. The
+  "Submitted" status is on all three pages but not yet in the CV PDF (v11) — add it
+  at the next CV compile.
 - **Ghosh** — in **Work in Progress**: early-stage, no circulatable draft, so no
   "available on request" offer. Promote it to Working Papers once a draft exists.
   The split is mirrored on `cv.html` and in the CV PDF (v9, 2026-10-13).
@@ -70,9 +72,12 @@ in both. A partial set gives Google a partial picture of who you are across the 
 
 ## Two rules that are easy to break later
 
-**Referee emails and personal contact details never appear in anything under this
-folder.** Not in `cv.html`, not in `files/cv.pdf`. This is a public repository;
-addresses on a crawlable page get scraped. Names, titles and institutions only.
+**Referee contact details and personal contact details never appear in anything
+under this folder.** Not in `cv.html`, not in `files/cv.pdf`: the referee list is
+names, titles and institutions only, so the site never pairs a referee with an
+address. The one deliberate exception is a coauthor's own institutional email on
+the title page of a paper they coauthored (e.g. `files/fiscal-multipliers.pdf`):
+that is the author's own published contact, identical on every circulated version.
 
 **No absolute internal paths.** Every internal link is relative with no leading slash
 — `css/style.css`, not `/css/style.css`. That is what lets the site render identically
